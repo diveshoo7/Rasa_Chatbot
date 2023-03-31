@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+
+- story: select option path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: order status path
+  steps:
+    - intent: order_status
+    - action: utter_order_status
+    - intent: order_search_code
+    - action: action_order_status
+
+- story: product search path
+  steps:
+    - intent: product_search
+    - action: utter_product_search
+    - intent: product_search_code
+    - action: action_product_search
+
+- story: affirm path
+  steps:
+    - intent: affirm
+    - action: utter_greet
+
+- story: deny path
+  steps:
+    - intent: deny
+    - action: utter_goodbye

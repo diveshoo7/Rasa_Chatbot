@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - order_status
+  - order_search_code
+  - product_search
+  - product_search_code
+  - product_stock
+  - bot_challenge
+
+actions:
+  - action_order_status
+  - action_product_search
+
+entities:
+  - order_code
+  - search_code
+
+slots:
+  order_code:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: order_code
+  search_code:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: search_code
+
+responses:
+  utter_greet:
+  - text: "Hello! Which option I can help you with?"
+    buttons:
+      - payload: "/order_status"
+        title: "Order Status"
+      - payload: "/product_search"
+        title: "Product Search"
+
+  utter_order_status:
+    - text: "Please enter the order reference number"
+
+  utter_product_search:
+    - text: "Please Enter the product name you wish to search"
+
+  utter_can_i_help_you:
+    - text: "Can I help you with something else?"
+      buttons:
+        - payload: "/affirm"
+          title: "Yes"
+        - payload: "/deny"
+          title: "No"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

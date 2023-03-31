@@ -1,0 +1,144 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yes please
+    - yup
+    - all right
+    - very well
+    - of course
+    - sure
+    - indeed
+    - absolutely
+    - affirmative
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - of course not
+    - absolutely not
+    - no indeed
+    - not at all
+    - negative
+    - not really
+    - by no means
+
+- intent: order_status
+  examples: |
+    - I want to check my order status
+    - order status
+    - checking the order status
+    - need to check the order status
+    - order status needs to be checked
+    - status of my order
+
+- intent: order_search_code
+  examples: |
+    - [007258114]{"entity": "order_code","value": "007258114"}
+    - [16240516]{"entity": "order_code","value": "16240516"}
+    - [150159638]{"entity": "order_code","value": "150159638"}
+    - [107534134]{"entity": "order_code","value": "107534134"}
+    - the code is [196400570]{"entity": "order_code","value": "196400570"}
+    - the code is [1624012]{"entity": "order_code","value": "1624012"}
+    - code is [007258114]{"entity": "order_code","value": "007258114"}
+    - code is [150159638]{"entity": "order_code","value": "150159638"}
+    - code is [2118775316]{"entity": "order_code","value": "2118775316"}
+    - [2118775779]{"entity": "order_code","value": "2118775779"}
+    - the id is [2118775779]{"entity": "order_code","value": "2118775779"}
+    - the id is [150159638]{"entity": "order_code","value": "150159638"}
+    - the id is [1624012]{"entity": "order_code","value": "1624012"}
+
+- intent: product_search
+  examples: |
+    - I want to search product
+    - I want this product
+    - Product Search
+    - find me a product
+    - I want to search a product
+    - Search a Product
+    - I want to search a product
+    - search a product
+    - search me a product
+    - this product needs to be searched
+
+- intent: product_search_code
+  examples: |
+    - [screw]{"entity": "search_code","value": "screw"}
+    - [hammer]{"entity": "search_code","value": "hammer"}
+    - [bolt]{"entity": "search_code","value": "bolt"}
+    - [long screw]{"entity": "search_code","value": "long screw"}
+    - [connector]{"entity": "search_code","value": "connector"}
+    - [oil]{"entity": "search_code","value": "oil"}
+    - [spray]{"entity": "search_code","value": "spray"}
+    - [hooking wire]{"entity": "search_code","value": "hooking wire"}
+    - i want to search [hammer]{"entity": "search_code","value": "hammer"}
+    - i want to search [oil]{"entity": "search_code","value": "oil"}
+    - i want to search [spray]{"entity": "search_code","value": "spray"}
+    - i want to search [screw]{"entity": "search_code","value": "screw"}
+    - i want to search [washer]{"entity": "search_code","value": "washer"}
+    - i want to search [paint]{"entity": "search_code","value": "paint"}
+    - i'm looking for [hammer]{"entity": "search_code","value": "hammer"}
+    - i'm looking for [oil]{"entity": "search_code","value": "oil"}
+    - i'm looking for [spray]{"entity": "search_code","value": "spray"}
+    - i'm looking for [screw]{"entity": "search_code","value": "screw"}
+    - i'm looking for [connector]{"entity": "search_code","value": "connector"}
+    - i'm looking for [hooking wire]{"entity": "search_code","value": "hooking wire"}
+    - i want to search [hooking wire]{"entity": "search_code","value": "hooking wire"}
+    - i want to see the results for [oil]{"entity": "search_code","value": "oil"}
+    - i want to see the results for [connector]{"entity": "search_code","value": "connector"}
+    - i want to see the results for [screw]{"entity": "search_code","value": "screw"}
+    - i want to see the results for [hammer]{"entity": "search_code","value": "hammer"}
+    - i want to see the results for [paint]{"entity": "search_code","value": "paint"}
+    - i want to see the results for [spray]{"entity": "search_code","value": "spray"}
+
+- intent: product_stock
+  examples: |
+    - i want to check the availability of the product
+    - is this product available
+    - this product availability
+    - is this product in stock
+    - product stock
+    - product in stock
+    - is this product in stock
+    - product's availability
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
